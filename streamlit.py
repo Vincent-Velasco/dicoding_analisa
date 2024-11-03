@@ -8,7 +8,7 @@ bike_df = pd.read_csv("./day.csv")
 
 st.set_page_config(layout = "wide")
 
-st.title("Welcome to my Dicoding Analisa Dashboard Website")
+st.title("Welcome to my Dicoding Analisa Website")
 st.header("My name is Vincent Velasco")
 
 col1, col2 = st.columns(2)
