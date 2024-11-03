@@ -18,7 +18,7 @@ with col1:
     
     bike_df_day_group = bike_df_day.groupby("workingday").mean()
     
-    st.pyplot(bike_df_day_group)
+    st.table(bike_df_day_group)
 
 
 with col2:
@@ -35,4 +35,4 @@ with col2:
     # plt.legend(["Casual", "Registered", "Total"])
     # plt.show()
 
-    st.pyplot(bike_df_month)
+    # st.pyplot(bike_df_month)
