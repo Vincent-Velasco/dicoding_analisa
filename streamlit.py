@@ -6,6 +6,8 @@ from matplotlib import pyplot as plt
 
 bike_df = pd.read_csv("./day.csv")
 
+st.set_page_config(layout = "wide")
+
 st.title("Welcome to my Dicoding Analisa Dashboard Website")
 st.header("My name is Vincent Velasco")
 
