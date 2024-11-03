@@ -18,7 +18,7 @@ with col1:
     
     bike_df_day_group = bike_df_day.groupby("workingday").mean()
     
-    print(bike_df_day_group)
+    st.pyplot(bike_df_day_group)
 
 
 with col2:
@@ -30,7 +30,9 @@ with col2:
     
     bike_df_month = bike_df_month.groupby(pd.Grouper(key = "dteday", freq = 'M')).sum()
     
-    fig = plt.figure(figsize = (15,10))
-    plt.plot(bike_df_month)
-    plt.legend(["Casual", "Registered", "Total"])
-    plt.show()
+    # fig = plt.figure(figsize = (15,10))
+    # plt.plot(bike_df_month)
+    # plt.legend(["Casual", "Registered", "Total"])
+    # plt.show()
+
+    st.pyplot(bike_df_month)
