@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib
 from matplotlib import pyplot as plt
 
-bike_df = pd.read_csv("/day.csv")
+bike_df = pd.read_csv("./day.csv")
 
 st.title("Welcome to my Dicoding Analisa Dashboard Website")
 st.header("My name is Vincent Velasco")
