@@ -17,8 +17,25 @@ with col1:
     st.write("Pertanyaan 1: Apakah ada hubungan antara hari libur atau hari kerja dengan jumlah rental sepeda?")
 
     bike_df_day = bike_df[["workingday", "casual", "registered", "cnt"]]
-    
+
     bike_df_day_group = bike_df_day.groupby("workingday").mean()
+    
+    bar_width = 0.3
+    
+    x = np.arange(len(bike_df_day_group.index))
+    
+    x2 = [i + bar_width for i in x]
+    
+    fig = plt.figure(figsize = (15,10))
+    plt.bar(x,bike_df_day_group["casual"], label = "Casual", width = bar_width)
+    plt.bar(x2,bike_df_day_group["registered"], label = "Registered", width = bar_width)
+    
+    plt.xticks([0,1], ["Weekend", "Weekday"])
+    plt.xlabel("Working Day or Not")
+    plt.ylabel("Average Rental Bike")
+    plt.title("Distribution of Casual and Registered User in Working Day or Not")
+    plt.legend()
+    plt.show()
 
     st.write("Table group by working day")
     st.table(bike_df_day_group)
@@ -35,10 +52,6 @@ with col2:
     
     bike_df_month = bike_df_month.groupby(pd.Grouper(key = "dteday", freq = 'M')).sum()
     
-    # fig = plt.figure(figsize = (15,10))
-    # plt.plot(bike_df_month)
-    # plt.legend(["Casual", "Registered", "Total"])
-    # plt.show()
     st.write("Line Chart by Month")
     st.line_chart(bike_df_month)
 
