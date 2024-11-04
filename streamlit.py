@@ -37,8 +37,8 @@ with col1:
     plt.legend()
     plt.show()
 
-    st.write("Table group by working day")
-    st.table(bike_df_day_group)
+    # st.write("Table group by working day")
+    # st.table(bike_df_day_group)
 
     st.write("Conclusion pertanyaan 1:Kurang lebih tidak ada hubungan antara jumlah rental sepeda dengan hari kerja atau tidak, tetapi bisa dilihat bahwa di hari kerja, jumlah user yang registered signifikan lebih banyak dibandingkan casual user, sehingga bisa dikatakan bahwa banyak user yang menggunakan rental sepeda untuk berangkat kerja")
 
